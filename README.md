@@ -46,5 +46,18 @@ services:
 ```
 
 ```
-docker-compose exec ansible ansible-playbook -i "ubuntu14,ubuntu16,ubuntu18,debian7,debian8,debian9" /etc/ansible/roles/role/tests/test.yml
+docker-compose exec ansible ansible-playbook -i "ubuntu14,ubuntu16,ubuntu18,debian7,debian8,debian9,centos6,centos7" /etc/ansible/roles/role/tests/test.yml
+```
+
+#### ansible role test
+
+```
+- hosts: all
+
+  vars:
+    ansible_user: "root"
+    ansible_ssh_pass: "root"
+
+  roles:
+    - "{{ playbook_dir.split('/')[0:-1]|join('/') | basename }}"
 ```
