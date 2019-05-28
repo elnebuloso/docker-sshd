@@ -1,0 +1,11 @@
+FROM centos:centos7
+
+RUN echo "install sshd" \
+  && yum -y install epel-release python openssh-server \
+  && yum -y clean all \
+  && echo "root:root" | chpasswd \
+  && sed -ri 's/^#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config \
+  && ssh-keygen -t rsa -N "" -f /etc/ssh/ssh_host_rsa_key
+
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]

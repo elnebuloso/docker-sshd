@@ -2,6 +2,39 @@ pipeline {
     agent any
 
     stages {
+        stage('centos6') {
+            steps {
+                script {
+                    image = docker.build("elnebuloso/sshd:centos6", "--pull --rm --no-cache -f Dockerfile.centos6 .")
+                    docker.withRegistry("https://registry.hub.docker.com", '061d45cc-bc11-4490-ac21-3b2276f1dd05'){
+                        image.push()
+                    }
+                }
+            }
+        }
+
+        stage('centos7') {
+            steps {
+                script {
+                    image = docker.build("elnebuloso/sshd:centos7", "--pull --rm --no-cache -f Dockerfile.centos7 .")
+                    docker.withRegistry("https://registry.hub.docker.com", '061d45cc-bc11-4490-ac21-3b2276f1dd05'){
+                        image.push()
+                    }
+                }
+            }
+        }
+
+        stage('debian7') {
+            steps {
+                script {
+                    image = docker.build("elnebuloso/sshd:debian7", "--pull --rm --no-cache -f Dockerfile.debian7 .")
+                    docker.withRegistry("https://registry.hub.docker.com", '061d45cc-bc11-4490-ac21-3b2276f1dd05'){
+                        image.push()
+                    }
+                }
+            }
+        }
+
         stage('debian7') {
             steps {
                 script {

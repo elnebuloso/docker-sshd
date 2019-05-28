@@ -37,6 +37,12 @@ services:
 
   debian9:
     image: elnebuloso/sshd:debian9
+    
+  centos6:
+    image: elnebuloso/sshd:centos6
+
+  centos7:
+    image: elnebuloso/sshd:centos7
 ```
 
 ```
