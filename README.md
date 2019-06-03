@@ -1,8 +1,17 @@
 # docker-sshd
 
-Dockerized SSH service
+[![Build Status](https://travis-ci.com/elnebuloso/docker-sshd.svg?branch=master)](https://travis-ci.com/elnebuloso/docker-sshd)
+[![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/sshd.svg)](https://hub.docker.com/r/elnebuloso/sshd)
+[![Docker Automated build](https://img.shields.io/docker/automated/elnebuloso/sshd.svg)](https://hub.docker.com/r/elnebuloso/sshd)
 
-## example usages for this images
+Dockerized SSH Service Containers
+
+## usage
+
+- for testing ssh connections against dockerized hosts
+- e.g. ansible role testing
+
+## examples
 
 ### dockerized ansible role testing
 
@@ -45,19 +54,8 @@ services:
     image: elnebuloso/sshd:centos7
 ```
 
+#### run ansible playbook against hosts
+
 ```
 docker-compose exec ansible ansible-playbook -i "ubuntu14,ubuntu16,ubuntu18,debian7,debian8,debian9,centos6,centos7" /etc/ansible/roles/role/tests/test.yml
-```
-
-#### ansible role test
-
-```
-- hosts: all
-
-  vars:
-    ansible_user: "root"
-    ansible_ssh_pass: "root"
-
-  roles:
-    - "{{ playbook_dir.split('/')[0:-1]|join('/') | basename }}"
 ```
