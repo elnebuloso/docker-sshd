@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.com/elnebuloso/docker-sshd.svg?branch=master)](https://travis-ci.com/elnebuloso/docker-sshd)
 [![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/sshd.svg)](https://hub.docker.com/r/elnebuloso/sshd)
 [![Docker Automated build](https://img.shields.io/docker/automated/elnebuloso/sshd.svg)](https://hub.docker.com/r/elnebuloso/sshd)
+[![GitHub](https://img.shields.io/github/license/elnebuloso/docker-ansible.svg)](https://github.com/elnebuloso/docker-sshd)
 
 Dockerized SSH Service Containers
 
