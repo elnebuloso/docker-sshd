@@ -1,6 +1,8 @@
+<img src="https://raw.githubusercontent.com/elnebuloso/docker-sshd/master/logo.png" width="100%"/>
+
 # docker-sshd
 
-[![Build Status](https://travis-ci.com/elnebuloso/docker-sshd.svg?branch=master)](https://travis-ci.com/elnebuloso/docker-sshd)
+![Release](https://github.com/elnebuloso/docker-sshd/workflows/Release/badge.svg)
 [![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/sshd.svg)](https://hub.docker.com/r/elnebuloso/sshd)
 [![GitHub](https://img.shields.io/github/license/elnebuloso/docker-ansible.svg)](https://github.com/elnebuloso/docker-sshd)
 
