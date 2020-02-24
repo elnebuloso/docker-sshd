@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.1.0] - 2020-02-24
+### Added
+- Dockerfile.debian10
+- Dockerfile.ubuntu19
+- Dockerfile.ubuntu20
+
+
 ## [1.0.0] - 2019-05-25
 ### Added
 - Dockerfile.centos6
