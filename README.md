@@ -8,6 +8,15 @@
 
 Dockerized SSH Service Containers
 
+## github
+
+- https://github.com/elnebuloso/docker-sshd
+
+## docker
+
+- https://hub.docker.com/r/elnebuloso/sshd
+- https://hub.docker.com/r/elnebuloso/sshd/tags?page=1&ordering=last_updated
+
 ## usage
 
 - for testing ssh connections against dockerized hosts
