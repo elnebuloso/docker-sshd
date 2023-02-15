@@ -15,26 +15,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: centos6
-        run: |
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker build --tag elnebuloso/sshd:centos6 --pull --rm --no-cache -f Dockerfile.centos6 .
-          docker push elnebuloso/sshd:centos6
-      - name: centos7
-        run: |
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker build --tag elnebuloso/sshd:centos7 --pull --rm --no-cache -f Dockerfile.centos7 .
-          docker push elnebuloso/sshd:centos7
-      - name: debian8
-        run: |
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker build --tag elnebuloso/sshd:debian8 --pull --rm --no-cache -f Dockerfile.debian8 .
-          docker push elnebuloso/sshd:debian8
-      - name: debian9
-        run: |
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker build --tag elnebuloso/sshd:debian9 --pull --rm --no-cache -f Dockerfile.debian9 .
-          docker push elnebuloso/sshd:debian9
       - name: debian10
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
@@ -45,26 +25,6 @@ jobs:
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
           docker build --tag elnebuloso/sshd:debian11 --pull --rm --no-cache -f Dockerfile.debian11 .
           docker push elnebuloso/sshd:debian11
-      - name: ubuntu14
-        run: |
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker build --tag elnebuloso/sshd:ubuntu14 --pull --rm --no-cache -f Dockerfile.ubuntu14 .
-          docker push elnebuloso/sshd:ubuntu14
-      - name: ubuntu16
-        run: |
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker build --tag elnebuloso/sshd:ubuntu16 --pull --rm --no-cache -f Dockerfile.ubuntu16 .
-          docker push elnebuloso/sshd:ubuntu16
-      - name: ubuntu18
-        run: |
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker build --tag elnebuloso/sshd:ubuntu18 --pull --rm --no-cache -f Dockerfile.ubuntu18 .
-          docker push elnebuloso/sshd:ubuntu18
-      - name: ubuntu19
-        run: |
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker build --tag elnebuloso/sshd:ubuntu19 --pull --rm --no-cache -f Dockerfile.ubuntu19 .
-          docker push elnebuloso/sshd:ubuntu19
       - name: ubuntu20
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
