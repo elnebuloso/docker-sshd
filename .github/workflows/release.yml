@@ -40,6 +40,11 @@ jobs:
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
           docker build --tag elnebuloso/sshd:debian10 --pull --rm --no-cache -f Dockerfile.debian10 .
           docker push elnebuloso/sshd:debian10
+      - name: debian11
+        run: |
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+          docker build --tag elnebuloso/sshd:debian11 --pull --rm --no-cache -f Dockerfile.debian11 .
+          docker push elnebuloso/sshd:debian11
       - name: ubuntu14
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
@@ -65,3 +70,8 @@ jobs:
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
           docker build --tag elnebuloso/sshd:ubuntu20 --pull --rm --no-cache -f Dockerfile.ubuntu20 .
           docker push elnebuloso/sshd:ubuntu20
+      - name: ubuntu22
+        run: |
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+          docker build --tag elnebuloso/sshd:ubuntu22 --pull --rm --no-cache -f Dockerfile.ubuntu22 .
+          docker push elnebuloso/sshd:ubuntu22
