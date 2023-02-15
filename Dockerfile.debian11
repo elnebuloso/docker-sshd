@@ -6,6 +6,7 @@ RUN echo "install sshd" \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         python \
+        python3 \
         openssh-server \
     && mkdir /var/run/sshd \
     && mkdir /root/.ssh \
